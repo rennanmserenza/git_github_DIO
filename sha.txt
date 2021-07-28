@@ -1,0 +1,5 @@
+cc2245f32dff1d761c1ec8b19fcb881b223f87aa
+49ef4e1dcc6ff05dc4687fa7b910e39f5b907c04
+
+    comando git para gerar um hash de 40 caracteres
+ openssl sha1 lorem.txt

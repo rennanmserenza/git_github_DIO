@@ -1,0 +1,15 @@
+blob(arquivos) -> armazena metha dados (tipo[blob], tamanho, \0 conteudo)
+
+tree(diretórios) -> aponta e armazena blobs, possui um tamanho, \0, aponta para um blob que tem e armazena o sha1 e o nome do arquivo com seu tipo.
+	responsável por gerar a estrutura de arquivos.
+
+*uma arvore pode apontar para outras árvores, e elas possum seu prórpio sha1, sempre que for alterado algo em uma blob dentro de uma tree,
+o sha1 da blob e da tree sofrerá alterações.
+
+commit -> aponta para uma árvore, para um parente(commit anterior), um autor, uma mensagem, e um timestamp(carimbo de tempo, quando ele foi criado), e um sha1.
+	um commit possui tamanho também
+
+*tudo que for auterado nos arquivos dentro do commit(blobs e trees) geram alterações na sua sha1. Este sha1 é o hash de toda a informação.
+
+Por você conseguir observar e recuperar todas as informações, o git se mostra um sistema distribuido e seguro.
+Preserva a integridade de código de forma simples.
